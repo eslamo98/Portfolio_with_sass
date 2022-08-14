@@ -1,5 +1,6 @@
 @use "../custom" as *;
-@use "../components/mixins" as *;
+@import "../custom";
+@import "../components/mixins";
 
 .my-btn {
   // @include media-breakpoint-down(sm) {

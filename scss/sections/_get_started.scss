@@ -19,6 +19,9 @@
       margin-top: 1rem;
       .cta-heading-1 {
         font-size: 4rem;
+        @include media-breakpoint-down(sm) {
+          font-size: 3rem;
+        }
       }
 
       .cta-heading-2 {
