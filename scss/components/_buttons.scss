@@ -1,0 +1,45 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.my-btn {
+  // @include media-breakpoint-down(sm) {
+  //   display: none;
+  // }
+
+  position: relative;
+  padding: 14px 50px 14px 20px;
+  border: 1px solid $white;
+  font-weight: 700;
+  background: $white;
+  &:hover {
+    @include gradient;
+    color: $white;
+
+    span {
+      background-color: rgba($black, 0.5);
+    }
+  }
+
+  //   @include gradient;
+
+  span {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary;
+    border-radius: 50%;
+
+    i {
+      display: inline-block;
+      color: $white;
+      font-size: 16px;
+    }
+  }
+}

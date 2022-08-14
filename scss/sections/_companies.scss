@@ -1,0 +1,26 @@
+@use "../custom" as *;
+
+.campanies {
+  padding: 0 0 5rem 0;
+
+  h4 {
+    margin-bottom: 2rem !important;
+  }
+
+  .company_logo {
+    position: relative;
+    max-width: 100%;
+    height: 3rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      filter: grayscale(150);
+    }
+    img {
+      height: 100%;
+    }
+  }
+}

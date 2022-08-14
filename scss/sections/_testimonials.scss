@@ -1,0 +1,70 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.testimonials {
+  position: relative;
+
+  @include gradient;
+
+  .testi-card {
+    padding: 2rem 1.5rem;
+    background: $white;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid $primary;
+    color: $black !important;
+
+    i {
+      font-size: 1.4rem;
+      color: rgba($primary, 0.7);
+    }
+
+    .rating i {
+      color: rgba($primary, 0.7);
+    }
+  }
+
+  .testi-pic {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba($primary, 0.7);
+  }
+
+  .testi-name {
+    text-align: center;
+    font-weight: 500;
+    color: $white;
+    margin-top: 3rem;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    position: relative;
+    display: inline-block;
+    // display: flex;
+    // align-items: center;
+    width: 60px;
+    height: 50px;
+    border: 2px solid $white;
+    color: $white;
+    padding: 10px;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: $white;
+      color: $black !important;
+    }
+  }
+
+  .carousel-control-next {
+    margin-left: 1rem;
+  }
+  .carousel-control-prev {
+    margin-right: 1rem;
+  }
+}

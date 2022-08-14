@@ -1,0 +1,65 @@
+@use "../custom" as *;
+@font-face {
+  font-family: poppins;
+  src: url("../../assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: poppins2;
+  src: url("../../assets/fonts/Poppins-Regular.ttf");
+}
+.heading-line::before {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: $primary;
+  margin: 0 auto;
+}
+.heading-line::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 0.7rem;
+  background-color: $primary;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+//DISPLAY 3
+.display-3 {
+  font-family: poppins, "sans-serif";
+}
+
+//BORDER LEFT
+.border-left {
+  border-left: 1px solid $gray-400;
+  height: 100%;
+  @include media-breakpoint-down(md) {
+    border: none;
+  }
+}
+
+//display none
+.display-none {
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0;
+  display: none;
+}
+
+//back to top
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+
+  i {
+    color: #fff;
+    font-size: 1rem;
+    @include absCenter;
+  }
+}

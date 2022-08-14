@@ -1,0 +1,22 @@
+@use "custom" as *;
+
+//import components
+
+@import "components/animations";
+
+@import "components/buttons";
+
+@import "components/mixins";
+
+@import "components/typography";
+
+//import sections
+@import "sections/navbar";
+@import "sections/intro";
+@import "sections/companies";
+@import "sections/services";
+@import "sections/testimonials";
+@import "sections/get_started";
+@import "sections/faq";
+@import "sections/work";
+@import "sections/footer";

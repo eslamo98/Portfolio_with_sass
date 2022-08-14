@@ -1,0 +1,143 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.footer {
+  padding-top: 1.5rem;
+  background: $footer;
+
+  .contact-box {
+    .contact-icon {
+      float: left;
+      @include media-breakpoint-down(lg) {
+        padding-top: 0.5rem;
+      }
+
+      .icon {
+        width: 3.5rem;
+        stroke: $primary;
+        @include media-breakpoint-down(lg) {
+          width: 2rem;
+        }
+      }
+    }
+
+    .contact-info {
+      float: left;
+      margin-left: 10px;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        @include media-breakpoint-down(lg) {
+          font-size: 13px;
+        }
+      }
+
+      p {
+        color: rgb(139, 139, 139);
+        @include media-breakpoint-down(lg) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .social-media {
+    margin: 0;
+    position: relative;
+    background: #212121;
+    align-items: center;
+
+    p {
+      margin: 0 !important;
+      color: $gray-400;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      @include media-breakpoint-down(md) {
+        margin-top: 0.5rem;
+      }
+      a {
+        margin-right: 1rem;
+        color: $white;
+        display: inline-block;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        @include media-breakpoint-down(md) {
+          margin-right: 0.5rem;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+        i {
+          font-size: 30px;
+          @include media-breakpoint-down(md) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .third {
+    padding: 2rem 0;
+    color: $white;
+
+    h2 {
+      position: relative;
+      font-size: 1.5rem;
+    }
+
+    .line {
+      display: block;
+      height: 2px;
+      background: $gray-800;
+      width: 50px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    ul {
+      li {
+        font-size: 14px;
+
+        a {
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .custom-m {
+      @include media-breakpoint-down(xl) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .copy {
+    background-color: $black;
+    color: $gray-500;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

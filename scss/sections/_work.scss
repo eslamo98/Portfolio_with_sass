@@ -1,0 +1,64 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+.work {
+  padding: 2rem 0;
+  .heading-line::after {
+    margin-bottom: 2rem;
+  }
+  .btns {
+    margin-top: 3rem;
+  }
+  .btns button {
+    background-color: $white;
+    color: $primary;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  .portifolio-box {
+    position: relative;
+    width: 100%;
+    max-height: 19rem;
+    overflow: hidden;
+    margin-bottom: 1.3rem;
+    border-top: 7px solid $purple-light;
+    img {
+      width: 100%;
+      height: 100%;
+      transition: 0.4s ease-in-out;
+    }
+    &:hover {
+      .portfolio-info {
+        opacity: 1;
+        background: rgba($primary, 0.6);
+      }
+
+      img {
+        transform: scale(1.5);
+      }
+    }
+    .portfolio-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background: rgba($primary, 0);
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+
+      .caption {
+        @include absCenter;
+        color: $white;
+        h4 {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
